@@ -17,8 +17,8 @@
 # Your code to define the method goes here.
 # =========================================
 
-def pmt(interest, number_payments, present_value)
-
+def pmt(interest, number_payments, principal)
+return (number_payments*principal*((1+interest)**number_payments))/(((1+interest)**number_payments)-1)
 end
 
 puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
