@@ -18,7 +18,9 @@
 # =========================================
 
 def pmt(interest, number_payments, principal)
-return (number_payments*principal*((1+interest)**number_payments))/(((1+interest)**number_payments)-1)
+numerator = principal * interest * ((1 + interest)**number_payments)
+denominator = ((1+interest)**number_payments)-1
+return (numerator.to_f/denominator.to_f).round.to_f
 end
 
 puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
